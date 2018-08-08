@@ -100,11 +100,11 @@ class ServiceProvider(object):
         self.name = util.testXMLValue(val)
         self.contact = ServiceContact(infoset, namespace)
         val = self._root.find(util.nspath('ProviderSite', namespace))
-        if val is not None:
-            urlattrib=val.attrib[util.nspath('href', XLINK_NAMESPACE)]
-            self.url = util.testXMLValue(urlattrib, True)
-        else:
-            self.url =None
+        #if val is not None:
+        #    urlattrib=val.attrib[util.nspath('href', XLINK_NAMESPACE)]
+        #    self.url = util.testXMLValue(urlattrib, True)
+        #else:
+        self.url =None
 
 class ServiceContact(object):
     """Initialize an OWS Common ServiceContact construct"""
